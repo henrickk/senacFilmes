@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --bg-principal: #111;
+    --bg-secundario: #2d2d2d;
+    --font-color-principal: #fff;
+    --cor-destaque: #E08E00;
+    --font-titulo: 'Bebas Neue', cursive;
+    --font-destaque: 'Montserrat', sans-serif;
+    --font-principal: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--font-color-principal);
+    font-family: var(--font-principal);
+
+}
+
+a {
+    color: var(--font-principal);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    background-color: var(--bg-secundario);
+    align-items: flex-end;
+    width: 100%;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-family: var(--font-titulo);
+    font-size: 4.8rem;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 2rem;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+p {
+    text-align: center;
+}
+
+#hero {
+    height: 32rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
+}
+
+/*Doutor Estranho*/
+
+#hero.DoutorEstranho::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url("https://www.themoviedb.org/t/p/original/dTn1HGhCuq26IoBq9qKsiYNFxfq.jpg");
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.4);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+    transform: scale(1);
+    animation: zoom 10s;
+}
+
+/*Homem Aranha*/
+
+#hero.homem-aranha::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url("https://www.themoviedb.org/t/p/original/Bwh7Lol5k3hSqYOtqXWxbbJVMx.jpg");
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.4);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+    transform: scale(1);
+    animation: zoom 10s;
+}
+
+/*Thor*/
+
+#hero.thor::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url("https://www.themoviedb.org/t/p/original/vvObT0eIWGlArLQx3K5wZ0uT812.jpg");
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.4);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+    transform: scale(1);
+    animation: zoom 10s;
+}
+
+/*Jujutsu*/
+
+#hero.jujutsu::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url("https://www.themoviedb.org/t/p/original/uBxkwY70q6d7c8dN0qAXRHmHeUQ.jpg");
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.4);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+    transform: scale(1);
+    animation: zoom 10s;
+}
+
+/*Sonic*/
+
+#hero.sonic::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url("https://www.themoviedb.org/t/p/original/aXsKvHmTfMPG3WWjJTPjlgKdwP4.jpg");
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.4);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+    transform: scale(1);
+    animation: zoom 10s;
+}
+
+@keyframes identifier {
+    0% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#hero img {
+    width: 150px;
+    height: 225px;
+    margin: 3.4rem 4.6rem;
+    margin-right: 0;
+    border-radius: 5px;
+
+}
+
+#hero p {
+    text-align: left;
+    margin: 1rem 1rem;
+}
+
+#hero .nomeFilme {
+    margin: 1rem 1rem;
+    font-size: 3.6rem;
+    font-family: var(--font-destaque);
+    text-shadow: 2px 2px 2px #111;
+}
+
+#hero .txtSinopse {
+    font-size: 1.4rem;
+    height: 100%;
+    margin: 1rem 1rem;
+    filter: opacity(.8);
+}
+
+#hero .text {
+    margin-top: 2rem;
+}
+
+.titleSection {
+    font-size: 1.8rem;
+    font-family: var(--font-principal);
+    font-weight: 700;
+    border-left: 4px solid var(--cor-destaque);
+    margin: 1.6rem;
+    padding-left: .4rem;
+}
+
+.button {
+    background-color: var(--cor-destaque);
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: .5rem 2rem;
+    margin: 1rem;
+    transition: box-shadow .5s ease-in-out;
+    justify-content: center;
+}
+
+.button:hover {
+    box-shadow: 0 0 8px #fff;
+}
+
+.sobreOFilme {
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    margin: 2rem;
+}
+
+
+.sobreOFilme .button {
+    width: 106px;
+    display: flex;
+    position: relative;
+}
+
+.icone-voltar,
+.icone-site {
+    position: absolute;
+    left: 2rem;
+    bottom: .2rem;
+}
+
+main {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filme-media {
+    display: none;
+}
+
+.elenco {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 1rem;
+    position: relative;
+
+}
+
+.cardElenco {
+    width: 143px;
+    display: flex;
+    background-color: var(--bg-secundario);
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 5rem 1rem 1rem 1rem;
+
+
+}
+
+.cardElenco p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.cardElenco p:nth-of-type(2) {
+    filter: opacity(.8);
+}
+
+.cardElenco img {
+    position: absolute;
+    margin: auto;
+    top: -5rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100px;
+    border-radius: 100%;
+    cursor: pointer;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--font-color-principal);
+}
+
+.cardElenco .button {
+    margin-bottom: 1rem;
+}
+
+.txtElenco {
+    margin-top: 5rem;
+}
+
+
+aside {
+    margin: 1rem 1rem;
+    background-color: var(--bg-secundario);
+    border-radius: 5px;
+    height: 100%;
+    min-width: 24rem;
+    width: 20rem;
+
+}
+
+aside .titulo-aside {
+    font-size: 1.6rem;
+}
+
+.txt-aside {
+    margin: 1rem 1rem;
+    font-size: 1.6rem;
+    filter: opacity(.8);
+}
+
+@media (max-width: 450px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .txtSinopse,
+    .nomeFilme {
+        display: none;
+    }
+
+    #hero {
+        justify-content: center;
+    }
+
+    .filme-media {
+        display: block;
+    }
+
+    .filme-media h2 {
+        font-size: 1.8rem;
+        font-family: var(--font-principal);
+        font-weight: 700;
+        border-left: 4px solid var(--cor-destaque);
+        margin: 1.6rem;
+        padding-left: .4rem;
+    }
+
+    .filme-media p {
+        text-align: left;
+        margin: 1rem 1rem;
+    }
+
+    .filme-media p:first-of-type {
+        margin: 1rem 1rem;
+        font-size: 3.6rem;
+        font-family: var(--font-destaque);
+        text-shadow: 2px 2px 2px #111;
+    }
+
+    .filme-media p:nth-of-type(2) {
+        font-size: 1.4rem;
+        height: 100%;
+        margin: 1rem 1rem;
+    }
+
+    .sobreOFilme {
+        flex-direction: column;
+        margin: 2rem;
+    }
+
+    aside {
+        margin: 1rem 1rem;
+        min-width: 16rem;
+        width: 20rem;
+
+    }
+
+
+}

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-principal: #111;
+    --bg-secundario: #2d2d2d;
+    --cor-destaque: #E08E00;
+    --font-color-principal: #fff;
+    --font-titulo: 'Bebas Neue', cursive;
+    --font-destaque: 'Montserrat', sans-serif;
+    --font-principal: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--font-color-principal);
+    font-family: var(--font-principal);
+}
+
+a {
+    color: var(--font-color-principal);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    background-color: var(--bg-secundario);
+    align-items: flex-end;
+    position: relative;
+}
+
+header h1 {
+    margin-left: 5rem;
+}
+
+
+.icone-teatro {
+    color: blue;
+    font-size: 5rem !important;
+    position: absolute;
+    left: 0;
+    top: .3rem;
+
+}
+
+h1 {
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-family: var(--font-titulo);
+    font-size: 4.8rem;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 2rem;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+#hero {
+    height: 30rem;
+    width: 100%;
+    position: relative;
+}
+
+#hero::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url("https://www.themoviedb.org/t/p/original/xfNHRI2f5kHGvogxLd0C5sB90L7.jpg");
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.4);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+    transform: scale(1);
+    animation: zoom 10s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#hero p {
+    font-family: var(--font-destaque);
+    font-size: 3.6rem;
+    filter: opacity(35%);
+    padding-left: 4.8rem;
+    padding-top: 4.8rem;
+    text-shadow: 5px 5px 2px #111;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-family: var(--font-principal);
+    font-weight: 700;
+    border-left: 4px solid var(--cor-destaque);
+    margin: 1.6rem 1rem;
+    padding-left: 0.4rem;
+}
+
+.secao {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    width: 200px;
+    background-color: var(--bg-secundario);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem;
+    position: relative;
+    min-width: 180px;
+}
+
+.card .icone-favorito {
+    position: absolute;
+    font-size: 2rem;
+    right: .5rem;
+    top: .5rem;
+    text-shadow: 2px 2px 2px black;
+    filter: opacity(0);
+}
+
+.card:hover .icone-favorito {
+    filter: opacity(1);
+
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: filter 0.5s;
+
+}
+
+.card img:hover {
+    filter: opacity(.8);
+    cursor: pointer;
+
+}
+
+.card p:first-of-type {
+    font-size: 1.6rem;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    margin: .5rem 1rem;
+
+}
+
+.card p:nth-last-child(2) {
+    font-size: 1.4rem;
+    filter: opacity(80%);
+    margin-top: .5rem;
+}
+
+.botao {
+    background-color: var(--cor-destaque);
+    font-size: 1.4rem;
+    font-family: var(--font-principal);
+    border-radius: 5px;
+    padding: .5rem 2rem;
+    margin: 1rem;
+    transition: box-shadow 0.4s ease-in;
+}
+
+.botao:hover {
+    box-shadow: 0 0 5px white;
+
+
+}
+
+#series-em-alta {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+
+}
+
+@media(max-width:425px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}

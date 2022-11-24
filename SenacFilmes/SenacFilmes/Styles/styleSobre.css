@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-principal: #111;
+    --bg-secundario: #2d2d2d;
+    --cor-destaque: #E08E00;
+    --font-color-principal: #fff;
+    --font-titulo: 'Bebas Neue', cursive;
+    --font-destaque: 'Montserrat', sans-serif;
+    --font-principal: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--font-color-principal);
+    font-family: var(--font-principal);
+}
+
+a {
+    color: var(--font-color-principal);
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-family: var(--font-titulo);
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-family: var(--font-principal);
+    font-weight: 700;
+    border-left: 4px solid var(--cor-destaque);
+    margin: 1.6rem 1rem;
+    padding-left: 0.4rem;
+}
+
+
+header {
+    display: flex;
+    background-color: var(--bg-secundario);
+    align-items: flex-end;
+}
+
+header h1 a {
+    color: var(--cor-destaque);
+
+}
+
+header nav li {
+    list-style: none;
+    margin: 0 2rem;
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    display: flex;
+}
+
+#integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.card {
+    width: 180px;
+    background-color: var(--bg-secundario);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem;
+    position: relative;
+    min-width: 180px;
+    min-height: 390px;
+    max-height: 390px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    height: 100%;
+
+}
+
+.card .nome {
+    font-size: 1.4rem;
+    font-family: var(--font-destaque);
+    margin: 1rem 1rem;
+}
+
+.card .idade {
+    font-size: 1.2rem;
+}
+
+.card a {
+    background-color: var(--cor-destaque);
+    font-size: 1rem;
+    font-family: var(--font-principal);
+    border-radius: 5px;
+    padding: .5rem .5rem;
+    margin: -0.5rem;
+    transition: box-shadow 0.4s ease-in;
+}
+
+.card a:hover {
+    box-shadow: 0 0 5px white;
+
+
+}
+
+.card nav li {
+    list-style: none;
+    margin: 1rem 1rem;
+    font-size: 1.8rem;
+}
+
+.card nav ul {
+    display: flex;
+}
+
+.card:hover {
+    color: var(--cor-destaque);
+
+}
+
+@media(max-width:425px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
